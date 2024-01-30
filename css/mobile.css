@@ -1,0 +1,237 @@
+/* MOBILE CSS AS REQUESTED */
+
+/* <!-- Author: Brendan Dileo, 000879513 --> */
+
+/*CSS FOR SEMINARS.HTML */
+
+/* CSS for screens under 599px */
+@media screen and (max-width: 599px) {
+
+.gridcontainer {
+    grid-template-columns: 1fr; 
+    margin: 0 auto; 
+}
+
+table.tableOne {
+    width: 100%; 
+    margin: 0; 
+}
+
+table.events {
+    width: 100%; 
+    margin: 0; 
+}
+
+nav ul {
+    flex-direction: column; 
+    width: 70%;
+    align-items: center;
+}
+
+nav li {
+    width: 100%;
+    margin: 5px;
+}
+
+nav a.icon {
+    float: right;
+    display: block;
+}
+
+nav.responsive {
+    position: relative;
+}
+
+nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+}
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* For screens less than 899px, and larger than 600px */
+@media (max-width: 899px) and (min-width: 600px) {
+nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    margin: 5px;
+    width: 30%; 
+    box-sizing: border-box;
+}
+
+nav a.icon {
+    float: none;
+    display: block;
+}
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+
+/* For screens less than 1399px, and larger than 900px */
+@media (max-width: 1399px) and (min-width: 900px) {
+nav {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center; 
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    margin: 15px;
+    box-sizing: border-box;
+}
+
+nav a.icon {
+    float: none;
+    display: block;
+}
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+
+/* For screens less than , and larger than 1499px */
+@media screen and (min-width: 1430px) {
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 25px;
+    width: 100%;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 15px 65px;
+    padding: 10px 60px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #B6D4CE;
+    color: white;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    
+}
+
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+/*CSS FOR REVIEWS.HTML */
+
+/* For screens less than 899px, and larger than 600px */
+@media (max-width: 899px) and (min-width: 600px) {
+    nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    nav li {
+        margin: 5px;
+        width: 30%; 
+        box-sizing: border-box;
+    }
+    
+    nav a.icon {
+    float: none;
+    display: block;
+    }
+    
+    fieldset {
+        width: 80%; 
+        margin: 0 auto;
+    }
+    textarea {
+        width: 80%; 
+        box-sizing: border-box;
+    }
+    }
+    
+    /* ------------------------------------------------------------------------------------------------------ */
+    
+    /* For screens less than 1399px, and larger than 900px */
+    @media (max-width: 1399px) and (min-width: 900px) {
+    nav {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center; 
+    }
+    
+    nav ul {
+        list-style-type: none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 15px;
+        box-sizing: border-box;
+    }
+    
+    nav a.icon {
+        float: none;
+        display: block;
+    }
+    }
+    
+    /* ------------------------------------------------------------------------------------------------------ */
+    
+    /* For screens less than , and larger than 1499px */
+    @media screen and (min-width: 1430px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 25px;
+        width: 100%;
+        margin: 0;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    nav li {
+        margin: 15px 65px;
+        padding: 10px 60px;
+        border: 2px solid black;
+        cursor: pointer;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: #B6D4CE;
+        color: white;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        
+    }
+    
+    }

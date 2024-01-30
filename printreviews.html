@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+    
+	<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <!-- Author: Brendan Dileo, 000879513 -->
+        
+			<title> Travel Reviews </title>
+
+            <style>
+                header {
+                    padding: 0 5em;
+                }
+
+                body {
+                    padding: 0 5em;
+                }
+
+                h3 {
+                    text-align: center;
+                }
+
+                @media print {nav, footer, table {
+                    display: none;
+                    border: none;
+                }
+                }
+
+            </style>
+    </head>
+
+    <header>
+
+        <h3>
+            Travel Seminars 
+            <br>
+            2023/2024
+        </h3>
+
+    </header>
+
+    <body>
+        <form action = "https://csunix.mohawkcollege.ca/tooltime/showit.pl" method = "post" >
+
+            <input type = "hidden" name = "formname" value = "travel reviews form">
+
+            <fieldset class = "labelfloatleft">
+
+                <legend>
+                    Trip Reviews
+                </legend>
+            
+                <div class="destinationLength">
+                    <label for="destination"></label>
+                    <select id="destination" name="destination">
+                        <option value="africa">Africa</option>
+                        <option value="asia">Asia</option>
+                        <option value="na" selected>North America</option>
+                        <option value="sa">South America</option>
+                    </select>
+
+                    <label for="length"></label>
+                    <select id="length" name="length">
+                        <option value="07">7 Days</option>
+                        <option value="10">10 Days</option>
+                        <option value="14">14 Days</option>
+                        <option value="21">21 Days</option>
+                    </select>
+                </div> <!-- Ends destinationlength -->
+
+                <legend>
+                    Your rating:
+                </legend>
+
+                <div class="ratingContainer">
+                    <input type="radio" name="rating" id="fivestar" value="5" checked="checked">
+                    <label for="fivestar" class="ratingLabel">
+                        <img src="images/5star.png" alt="fivestar"> 
+                    </label>
+                </div> <!-- Ends ratingContainer class -->
+               
+                <div class="ratingContainer">
+                    <input type="radio" name="rating" id="fourstar" value="4" >
+                    <label for="fourstar" class="ratingLabel">
+                        <img src="images/4star.png" alt="fourstar">
+                    </label>
+                </div> <!-- Ends ratingContainer class -->
+
+                <div class="ratingContainer">
+                    <input type="radio" name="rating" id="threestar" value="3" >
+                    <label for="threestar" class="ratingLabel">
+                        <img src="images/3star.png" alt="threestar">
+                    </label>
+                </div> <!-- Ends ratingContainer class -->
+
+                <div class="ratingContainer">
+                    <input type="radio" name="rating" id="twostar" value="2" >
+                    <label for="twostar" class="ratingLabel">
+                        <img src="images/2star.png" alt="twostar">
+                    </label>
+                </div> <!-- Ends ratingContainer class -->
+
+                <div class="ratingContainer">
+                    <input type="radio" name="rating" id="onestar" value="1">
+                    <label for="onestar" class="ratingLabel">
+                        <img src="images/1star.png" alt="onestar">
+                    </label>
+                </div> <!-- Ends ratingContainer class -->
+
+                <legend>Comments</legend>
+                <textarea cols="60" rows="9" name="comments" placeholder=""></textarea>
+
+            </fieldset> <!--Ends labelfloatleft fieldset-->
+
+            <fieldset>
+
+                <legend>
+                    I would be interested in trips to these areas: (check all that apply)
+                </legend>
+
+                <div>
+                    <input type="checkbox" id="africa" name="africa" value="africa">
+                    <label for="africa">Africa</label>
+
+                </div> <!-- Africa Class -->
+                
+                <div>
+                    <input type="checkbox" id="asia" name="asia" value="asia">
+                    <label for="asia">Asia</label>
+
+                </div> <!-- Ends Asia Class -->
+
+                <div>
+                    <input type="checkbox" id="northamerica" name="north america" value="north america">
+                    <label for="northamerica">North America</label>
+                </div> <!-- Ends North America Class -->
+                
+                <div>
+                    <input type="checkbox" id="southamerica" name="south america" value="south america" checked="checked">
+                    <label for="southamerica">South America</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="other" name="other" value="other">
+                    <label for="other">Other (please specify)</label>
+                    <input type="text" id="otherText" name="otherText">
+                </div>
+
+            </fieldset> <!-- Ends the checbox option fieldset-->
+
+            <fieldset>
+
+                <legend>
+                    About you (optional) 
+                </legend>
+
+                <legend>
+                    I ussually prefer these types of trips (select all that apply) : 
+                </legend>
+
+                <label for="aboutyou"></label>
+                <select id="aboutyou" name="aboutyou" multiple size="4">
+
+                    <option>Cruise</option>
+                    <option>Cultural/Historic</option>
+                    <option>Cycling</option>
+                    <option>Hiking</option>
+                </select>
+
+                <div class="info">
+
+                    <div>
+                        <label for="firstname">First Name</label><br>
+                        <input type="text" id="firstname" name="firstname" class="green">
+                    </div>
+
+                    <div>
+                        <label for="lastname">Last Name</label><br>
+                        <input type="text" id="lastname" name="lastname" class="green">
+                    </div>
+
+                    <div>
+                        <label for="phonenumber">Phone Number</label><br>
+                        <input type="text" id="phonenumber" name="phonenumber" placeholder="123-456-7890" class="green">
+                    </div>
+
+                    <div>
+                        <label for="emailaddr">Email Address</label><br>
+                        <input type="text" id="emailaddr" name="emailaddress" placeholder="name@example.com" class="green">
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <input type="submit" value="SEND FEEDBACK" class="buttons">
+            <input type="reset" value="CANCEL" class="buttons">
+
+        </form>
+
+        <div class="csimage">
+            <img src="images/CSUNIXPROOF.png" alt="CS UNIX PROOF">
+        </div>
+    </body>
+</html>

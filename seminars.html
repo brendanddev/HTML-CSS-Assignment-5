@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+    
+	<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+            <!-- Author: Brendan Dileo, 000879513 -->
+        
+			<title> Travel Seminars </title>
+
+            <link rel="stylesheet" type = "text/css" href = "css/travelstyles.css">
+            <link rel="stylesheet" type="text/css" href="css/mobile.css">
+            <link rel="stylesheet" media="print" href="printseminars.html">
+            
+
+			<style>
+
+                .gridcontainer {
+                    display: grid;
+                    grid-template-rows: 0.3fr 2fr 0.5fr;
+                    grid-template-columns: 4fr;
+                }
+
+                table.tableOne {
+                    grid-row: 1;
+                    border-collapse: collapse;
+                    width: 30%;
+                    margin-bottom: 1.5%;
+                    padding: 0em 1em;
+                    margin: 0 150px;
+                }
+
+                table.tableOne caption {
+                    text-align: left;
+                }
+
+                .legendColor {
+                    padding: 0;
+                }
+
+                .legendColor span {
+                    display: inline-block;
+                    width: 15px; 
+                    height: 40px; 
+                    margin-right: 5px; 
+                }
+
+                .legendColor span.green {
+                     background-color: #B6D4CE;
+                }
+
+                .legendColor span.blue {
+                    background-color: #5993C7;
+                }
+
+                .legendColor span.brown {
+                    background-color: #A19372;
+                }
+
+                .legendColor span.orange {
+                    background-color: #F4AF60;
+                }
+
+                table.events {
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                    width: 80%; 
+                    margin: auto; 
+                }
+
+                table.events thead tr {
+                    background-color: #72B57D;
+                    color: white;
+                }
+
+                table.events tbody tr {
+                    background-color: #72B57D;
+                }
+
+                table.events td, table.events th {
+                    border: 1px solid black;
+                }
+
+                table.events th {
+                    height: 35px;
+                }
+
+                table.events tbody tr {
+                    height: 60px;
+                }
+
+                table.events caption {
+                    caption-side: bottom;
+                    text-align: right;
+                }
+
+                table.tableTwo {
+                    grid-row: 2;
+                }
+
+                .tableTwo td.africa {
+                    background-color: #F4AF60;
+                }
+
+                .tableTwo td.northamerica {
+                    background-color: #B6D4CE;
+                }
+
+                .tableTwo td.asia {
+                    background-color: #A19372;
+                }
+
+                .tableTwo td.southamerica {
+                    background-color: #5993C7;
+                }
+
+                .tableTwo td.whitebox {
+                    background-color: white;
+                }
+
+                .tableTwo td.noseminar {
+                    background-image: url(images/dust.jpg);
+                    font-weight: bold;
+                    text-align: center;
+                }
+
+                footer {
+                    grid-row: 3;
+                    grid-column: 1;
+                    margin: 10px;
+                    padding: 0;
+                    text-align: center;
+                    border-top: 2px solid black;
+                }
+
+                /* ------------------------------------------------------------------------------------------------------ */
+
+                /* CSS for screens under 599px */
+                @media screen and (max-width: 599px) {
+
+                    .gridcontainer {
+                        grid-template-columns: 1fr; 
+                        margin: 0 auto; 
+                    }
+
+                    table.tableOne {
+                        width: 100%; 
+                        margin: 0; 
+                    }
+
+                    table.events {
+                        width: 100%; 
+                        margin: 0; 
+                    }
+
+                nav ul {
+                    flex-direction: column; 
+                    width: 70%;
+                    align-items: center;
+                }
+
+                nav li {
+                    width: 100%;
+                    margin: 5px;
+                }
+
+                nav a.icon {
+                    float: right;
+                    display: block;
+                }
+
+                nav.responsive {
+                    position: relative;
+                }
+
+                nav.responsive a {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                }
+                }
+        /* ------------------------------------------------------------------------------------------------------ */
+                /* For screens less than 899px, and larger than 600px */
+                @media (max-width: 899px) and (min-width: 600px) {
+                nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                }
+
+                nav li {
+                    margin: 5px;
+                    width: 30%; 
+                    box-sizing: border-box;
+                }
+
+                nav a.icon {
+                float: none;
+                display: block;
+                }
+                }
+
+        /* ------------------------------------------------------------------------------------------------------ */
+
+                /* For screens less than 1399px, and larger than 900px */
+                @media (max-width: 1399px) and (min-width: 900px) {
+                nav {
+                    width: 100%;
+                    box-sizing: border-box;
+                    text-align: center; 
+                }
+
+                nav ul {
+                    list-style-type: none;
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                nav li {
+                    margin: 15px;
+                    box-sizing: border-box;
+                }
+
+                nav a.icon {
+                    float: none;
+                    display: block;
+                }
+                }
+
+        /* ------------------------------------------------------------------------------------------------------ */
+
+                /* For screens less than , and larger than 1499px */
+                @media screen and (min-width: 1430px) {
+                nav {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    line-height: 25px;
+                    width: 100%;
+                    margin: 0;
+                }
+
+                nav ul {
+                    list-style-type: none;
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                }
+
+                nav li {
+                    margin: 15px 65px;
+                    padding: 10px 60px;
+                    border: 2px solid black;
+                    cursor: pointer;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    background-color: #B6D4CE;
+                    color: white;
+                    border-bottom-right-radius: 10px;
+                    border-top-left-radius: 10px;
+                    
+                }
+
+                }
+        /* ------------------------------------------------------------------------------------------------------ */
+        </style>
+
+    </head>
+
+    <body>
+    <header>
+
+        <h1>
+            Travel Seminars 
+            <br>
+            2023/2024
+        </h1>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li>About Us </li>
+            <li>Countries </li>
+            <li><a href="seminars.html">Seminars</a></li>
+            <li>Photos </li>
+            <li><a href="reviews.html">Travel</a></li> 
+        </ul>
+    </nav>
+
+    <main>
+        <div class="gridcontainer">
+
+            <table class="tableOne">
+
+                <caption>Legend:</caption>
+
+                    <tr>
+                      <td class="legendColor"><span class="green"></span></td>
+                      <td>North America</td>
+                      <td class="legendColor"><span class="blue"></span></td>
+                      <td>South America</td>
+                      <td class="legendColor"><span class="brown"></span></td>
+                      <td>Asia</td>
+                      <td class="legendColor"><span class="orange"></span></td>
+                      <td>Africa</td>
+                    </tr>
+                  
+            </table> <!--Ends tableOne class-->
+
+            <div class="tableTwo">
+
+                <table class="events">
+
+                    <caption>Schedule is subject to change</caption>
+            
+                    <thead>
+
+                        <tr>
+                            <th>Day</th>
+                            <th>7 am - 9 am</th>
+                            <th>9 am - 11 am</th>
+                            <th>11 am - 12 pm</th>
+                            <th>12 pm - 2 pm</th>
+                            <th>2 pm - 4 pm</th>
+                            <th>6 pm - 8 pm</th>
+                            <th>8 pm - 10 pm</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+            
+                        <tr>
+                            <th>Monday</th>
+                            <td class="northamerica">North America</td>
+                            <td class="asia">Asia</td>
+                            <td colspan="4" class="africa">Africa</td>
+                            <!-- <td></td>
+                            <td></td> -->
+                            <td rowspan="2" class="northamerica">North America</td>
+                        </tr>
+                
+                        <tr>
+                            <th>Tuesday</th>
+                            <td rowspan="4" class="africa">Africa</td>
+                            <td colspan="2" class="northamerica">North America</td>
+                            <td class="whitebox"></td>
+                            <td colspan="2" class="asia">Asia</td>
+                            <!-- <td></td>
+                            <td></td> -->
+                            <!--<td></td> -->
+                        </tr>
+                
+                        <tr>
+                            <th>Wednesday</th>
+                            <!-- <td></td> -->
+                            <td rowspan="2" colspan="3" class="asia">Asia</td>
+                            <!-- <td></td>
+                            <td></td> -->
+                            <td class="northamerica">North America</td>
+                            <td rowspan="2" colspan="2" class="southamerica">South America</td>
+                            <!-- <td></td> -->
+                        </tr>
+                
+                        <tr>
+                            <th>Thursday</th>
+                            <!-- <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td> -->
+                            <td class="whitebox"></td>
+                            <!-- <td></td>
+                            <td></td> -->
+                        </tr>
+                
+                        <tr>
+                            <th>Friday</th>
+                            <!-- <td></td> -->
+                            <td colspan="5" class="southamerica">South America</td>
+                            <!-- <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td> -->
+                            <td class="noseminar">No Seminars</td>
+                        </tr>
+
+                        <tr>
+                            <th>Saturday</th>
+                            <td rowspan="2" class="southamerica">South America</td>
+                            <td class="whitebox"></td>
+                            <td class="northamerica">North America</td>
+                            <td rowspan="2" class="africa">Africa</td>
+                            <td rowspan="2" class="southamerica">South America</td>
+                            <td rowspan="2" colspan="2" class="asia">Asia</td>
+                            <!-- <td></td> -->
+                        </tr>
+
+                        <tr>
+                            <th>Sunday</th>
+                            <!-- <td></td> -->
+                            <td class="africa">Africa</td>
+                            <td class="whitebox"></td>
+                            <!-- <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td> -->
+                        </tr>
+
+                        <tr>
+                            <th>Holidays</th>
+                            <td colspan="7" class="noseminar">No Seminars</td>
+                            <!-- <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td> -->
+                        </tr>
+
+                    </tbody>
+
+                </table> <!--Ends tableTwo table-->
+
+            </div> <!--Ends tableTwo class-->
+
+            <footer>
+                <img src="images/outdooradventurehorizontal.png" alt="Outdoor Adventure Logo Horizontal" >
+            </footer>
+            
+        </div> <!--Ends gridcontainer class-->
+
+    </main> <!--Ends main -->
+</html>
+
+
+
+

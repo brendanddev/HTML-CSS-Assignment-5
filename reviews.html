@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+    
+	<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <!-- Author: Brendan Dileo, 000879513 -->
+        
+			<title> Travel Reviews </title>
+
+            <link rel ="stylesheet" type = "text/css" href = "css/travelstyles.css">
+            <link rel="stylesheet" type="text/css" href=""> <!-- Mobile CSS stylesheet ruins the table when under 600px-->
+            <link rel="stylesheet" media="print" href="printreviews.html">
+
+			<style>
+                form {
+                    margin: 0 200px;
+                    padding: 10px;
+                    background-color: white;
+                    border: 2px solid black;
+                }
+
+                .labelfloatleft label {
+                    width: 120px;
+                    margin-right: 15px;
+                    float: left;
+                    text-align: right;
+                }
+
+                .labelfloatleft input {
+                    display: block;
+                    margin-bottom: 5px;
+                }
+
+                .destinationLength {
+                    margin-bottom: 20px;
+                }
+
+                .ratingContainer {
+                    display: flex;
+                }
+
+                .ratingContainer img {
+                    margin-right: 25px;
+                }
+
+                .ratingLabel {
+                    margin-right: 5px;
+                }
+
+                fieldset {
+                    margin-bottom: 1em;
+                    border: 2px solid black;
+                    
+                }
+
+                legend {
+                    color: black;
+                    padding: 0 10px;
+                }
+
+                .textbox {
+                    background-color: black;
+                    border: 3px solid black;
+                    border-radius: 10px;
+                }
+
+                .info {
+                    margin-top: 15px;
+                }
+
+                .green {
+                    background-color: #B6D4CE ;
+                    border-top: 0.5px solid black;
+                    border-left: 0.5px solid black;
+                }
+
+                .buttons {
+                    background-color: #B6D4CE ;
+                    border-top: 0.5px solid black;
+                    border-left: 0.5px solid black;
+                    width: 115px; 
+                    height: 30px;
+                    font-weight: bold;
+                    margin-bottom: 15px;
+                }
+
+                .csimage {
+                    margin-top: 10px;
+                    text-align: center;
+                }
+
+                footer {
+                    border-top: 2px solid black;
+                    margin: 20px 10px 20px 10px;
+                    padding: 25px 20px;
+                    text-align: center;
+                }
+
+        /* ------------------------------------------------------------------------------------------------------ */
+
+                /* CSS for screens under 599px */
+                @media screen and (max-width: 599px) {
+                nav ul {
+                    flex-direction: column; 
+                    width: 70%;
+                    align-items: center;
+                }
+
+                nav li {
+                    width: 100%;
+                    margin: 5px;
+                }
+
+                nav a.icon {
+                    float: right;
+                    display: block;
+                }
+
+                nav.responsive {
+                    position: relative;
+                }
+
+                nav.responsive a {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                }
+                form {
+                    margin: 0 5%; 
+                    
+                }   
+                textarea {
+                    width: 80%; 
+                    box-sizing: border-box;
+                }
+                }
+        /* ------------------------------------------------------------------------------------------------------ */
+                /* For screens less than 899px, and larger than 600px */
+                @media (max-width: 899px) and (min-width: 600px) {
+                nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                }
+
+                nav li {
+                    margin: 5px;
+                    width: 30%; 
+                    box-sizing: border-box;
+                }
+
+                nav a.icon {
+                float: none;
+                display: block;
+                }
+                
+                fieldset {
+                    width: 80%; 
+                    margin: 0 auto;
+                }
+                textarea {
+                    width: 80%; 
+                    box-sizing: border-box;
+                }
+                }
+
+        /* ------------------------------------------------------------------------------------------------------ */
+
+                /* For screens less than 1399px, and larger than 900px */
+                @media (max-width: 1399px) and (min-width: 900px) {
+                nav {
+                    width: 100%;
+                    box-sizing: border-box;
+                    text-align: center; 
+                }
+
+                nav ul {
+                    list-style-type: none;
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                nav li {
+                    margin: 15px;
+                    box-sizing: border-box;
+                }
+
+                nav a.icon {
+                    float: none;
+                    display: block;
+                }
+                }
+
+        /* ------------------------------------------------------------------------------------------------------ */
+
+                /* For screens less than , and larger than 1499px */
+                @media screen and (min-width: 1430px) {
+                nav {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    line-height: 25px;
+                    width: 100%;
+                    margin: 0;
+                }
+
+                nav ul {
+                    list-style-type: none;
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                }
+
+                nav li {
+                    margin: 15px 65px;
+                    padding: 10px 60px;
+                    border: 2px solid black;
+                    cursor: pointer;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    background-color: #B6D4CE;
+                    color: white;
+                    border-bottom-right-radius: 10px;
+                    border-top-left-radius: 10px;
+                    
+                }
+
+                }
+        /* ------------------------------------------------------------------------------------------------------ */
+
+            </style>
+    </head>
+    
+    <body>
+
+        <div class="container">
+            <header>
+        
+                <h1>
+                    Travel Seminars 
+                    <br>
+                    2023/2024
+                </h1>
+        
+            </header>
+
+            <nav>
+                <ul>
+                    <li>About Us </li>
+                    <li>Countries </li>
+                    <li><a href="seminars.html">Seminars</a></li>
+                    <li>Photos </li>
+                    <li><a href="reviews.html">Travel</a></li> 
+                </ul>
+            </nav>
+        </div>
+
+        <form action = "https://csunix.mohawkcollege.ca/tooltime/showit.pl" method = "post" >
+
+            <input type = "hidden" name = "formname" value = "Brendan Dileo Travel Feedback">
+
+            <fieldset class = "labelfloatleft">
+
+                <legend>
+                    Trip Reviews
+                </legend>
+            
+                <div class="destinationLength">
+                    <label for="destination"></label>
+                    <select id="destination" name="destination">
+                        <option value="africa">Africa</option>
+                        <option value="asia">Asia</option>
+                        <option value="na" selected>North America</option>
+                        <option value="sa">South America</option>
+                    </select>
+
+                    <label for="length"></label>
+                    <select id="length" name="length">
+                        <option value="07">7 Days</option>
+                        <option value="10">10 Days</option>
+                        <option value="14">14 Days</option>
+                        <option value="21">21 Days</option>
+                    </select>
+                </div> <!-- Ends destinationlength -->
+
+                <legend>
+                    Your rating:
+                </legend>
+
+                <div class="ratingContainer">
+                    <input type="radio" name="rating" id="fivestar" value="5" checked="checked">
+                    <label for="fivestar" class="ratingLabel">
+                        <img src="images/5star.png" alt="fivestar"> 
+                    </label>
+                </div> <!-- Ends ratingContainer class -->
+               
+                <div class="ratingContainer">
+                    <input type="radio" name="rating" id="fourstar" value="4" >
+                    <label for="fourstar" class="ratingLabel">
+                        <img src="images/4star.png" alt="fourstar">
+                    </label>
+                </div> <!-- Ends ratingContainer class -->
+
+                <div class="ratingContainer">
+                    <input type="radio" name="rating" id="threestar" value="3" >
+                    <label for="threestar" class="ratingLabel">
+                        <img src="images/3star.png" alt="threestar">
+                    </label>
+                </div> <!-- Ends ratingContainer class -->
+
+                <div class="ratingContainer">
+                    <input type="radio" name="rating" id="twostar" value="2" >
+                    <label for="twostar" class="ratingLabel">
+                        <img src="images/2star.png" alt="twostar">
+                    </label>
+                </div> <!-- Ends ratingContainer class -->
+
+                <div class="ratingContainer">
+                    <input type="radio" name="rating" id="onestar" value="1">
+                    <label for="onestar" class="ratingLabel">
+                        <img src="images/1star.png" alt="onestar">
+                    </label>
+                </div> <!-- Ends ratingContainer class -->
+
+                <legend>Comments</legend>
+                <textarea cols="60" rows="9" name="comments" placeholder=""></textarea>
+
+            </fieldset> <!--Ends labelfloatleft fieldset-->
+
+            <fieldset>
+
+                <legend>
+                    I would be interested in trips to these areas: (check all that apply)
+                </legend>
+
+                <div>
+                    <input type="checkbox" id="africa" name="africa" value="africa">
+                    <label for="africa">Africa</label>
+
+                </div> <!-- Africa Class -->
+                
+                <div>
+                    <input type="checkbox" id="asia" name="asia" value="asia">
+                    <label for="asia">Asia</label>
+
+                </div> <!-- Ends Asia Class -->
+
+                <div>
+                    <input type="checkbox" id="northamerica" name="north america" value="north america">
+                    <label for="northamerica">North America</label>
+                </div> <!-- Ends North America Class -->
+                
+                <div>
+                    <input type="checkbox" id="southamerica" name="south america" value="south america" checked="checked">
+                    <label for="southamerica">South America</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="other" name="other" value="other">
+                    <label for="other">Other (please specify)</label>
+                    <input type="text" id="otherText" name="otherText">
+                </div>
+
+            </fieldset> <!-- Ends the checbox option fieldset-->
+
+            <fieldset>
+
+                <legend>
+                    About you (optional) 
+                </legend>
+
+                <legend>
+                    I ussually prefer these types of trips (select all that apply) : 
+                </legend>
+
+                <label for="aboutyou"></label>
+                <select id="aboutyou" name="aboutyou" multiple size="4">
+
+                    <option>Cruise</option>
+                    <option>Cultural/Historic</option>
+                    <option>Cycling</option>
+                    <option>Hiking</option>
+                </select>
+
+                <div class="info">
+
+                    <div>
+                        <label for="firstname">First Name</label><br>
+                        <input type="text" id="firstname" name="firstname" class="green">
+                    </div>
+
+                    <div>
+                        <label for="lastname">Last Name</label><br>
+                        <input type="text" id="lastname" name="lastname" class="green">
+                    </div>
+
+                    <div>
+                        <label for="phonenumber">Phone Number</label><br>
+                        <input type="text" id="phonenumber" name="phonenumber" placeholder="123-456-7890" class="green">
+                    </div>
+
+                    <div>
+                        <label for="emailaddr">Email Address</label><br>
+                        <input type="text" id="emailaddr" name="emailaddress" placeholder="name@example.com" class="green">
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <input type="submit" value="SEND FEEDBACK" class="buttons">
+            <input type="reset" value="CANCEL" class="buttons">
+
+        </form>
+
+        <div class="csimage">
+            <img src="images/CSUNIXPROOF.png" alt="CS UNIX PROOF">
+        </div>
+
+        <footer>
+            <img src="images/outdooradventurehorizontal.png" alt="Outdoor Adventure Logo Horizontal" >
+        </footer>
+    </body>
+</html>
